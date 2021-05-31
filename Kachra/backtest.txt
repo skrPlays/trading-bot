@@ -1,0 +1,129 @@
+Entry:221.7Exit:218.6Chance %age:-1.4%
+Entry:192.0Exit:190.85Chance %age:-0.6%
+Entry:99.0Exit:100.85Chance %age:1.87%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:486.75Exit:476.75Chance %age:-2.05%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1174.0Chance %age:1.65%
+Entry:8710.0Exit:8702.1Chance %age:-0.09%
+Entry:3100.0Exit:3245.0Chance %age:4.68%
+Entry:3036.0Exit:3021.9Chance %age:0.46%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:192.0Exit:189.75Chance %age:-1.17%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:486.75Exit:481.05Chance %age:-1.17%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1874.55Chance %age:-0.94%
+Entry:1155.0Exit:1152.0Chance %age:-0.26%
+Entry:8710.0Exit:8825.55Chance %age:1.33%
+Entry:3100.0Exit:3185.0Chance %age:2.74%
+Entry:3036.0Exit:3021.9Chance %age:0.46%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:192.0Exit:189.6Chance %age:-1.25%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:486.75Exit:478.8Chance %age:-1.63%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+Entry:3100.0Exit:3185.0Chance %age:2.74%
+Entry:3036.0Exit:3021.9Chance %age:0.46%
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:192.0Exit:189.6Chance %age:-1.25%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:486.75Exit:478.8Chance %age:-1.63%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:810.0Exit:814.9Chance %age:0.6%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+Entry:863.4Exit:860.15Chance %age:-0.38%
+Entry:3100.0Exit:3185.0Chance %age:2.74%
+Entry:3036.0Exit:3021.9Chance %age:0.46%
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:192.0Exit:189.6Chance %age:-1.25%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+Entry:3100.0Exit:3185.0Chance %age:2.74%
+Entry:3036.0Exit:3021.9Chance %age:0.46%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:192.0Exit:189.6Chance %age:-1.25%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+Entry:3100.0Exit:3185.0Chance %age:2.74%
+Entry:3036.0Exit:3021.9Chance %age:0.46%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:192.0Exit:189.6Chance %age:-1.25%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:486.75Exit:478.8Chance %age:-1.63%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+Entry:3100.0Exit:3185.0Chance %age:2.74%
+Entry:3036.0Exit:3021.9Chance %age:0.46%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+
+Entry:221.7Exit:218.55Chance %age:-1.42%
+Entry:99.0Exit:97.7Chance %age:-1.31%
+Entry:1951.0Exit:1955.2Chance %age:-0.22%
+Entry:94.0Exit:93.3Chance %age:0.74%
+Entry:1892.4Exit:1896.3Chance %age:0.21%
+Entry:1155.0Exit:1154.35Chance %age:-0.06%
+Entry:8710.0Exit:8869.0Chance %age:1.83%
+
+Entry:221.7Exit:215.8Chance %age:-2.66%
+
+Entry:221.7Exit:215.8Chance %age:-2.66%
+
+
+
+
+
+
