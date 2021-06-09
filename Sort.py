@@ -26,6 +26,7 @@ def sort(algo_response):
     lambda as built-in functions perform faster than hand-crafted functions. '''
     # sorted_x = print(sorted(x, key=itemgetter('sortvalue')))
     print(sorted_algo_response)
+    return sorted_algo_response
 
 
 sort(algo_response)
