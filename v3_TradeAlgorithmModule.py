@@ -15,8 +15,8 @@ logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format=
 
 def getNewTradeDecision(historical):
     decision = "buy"
-    sorter = getSortingValueType(historical)
-    return decision, sorter
+    sortvalue = getSortingValueType(historical)
+    return decision, sortvalue
 
 
 def getSortingValueType(historical):
@@ -32,12 +32,15 @@ def tradeAlgorithm(historical, operation):
     logging.info('Trade Algorithm Module called with operation - '+operation)
     scrip_info = {}
 
+    scrip_info['instrument_token'] = 1011007
+    scrip_info['tradingsymbol'] = "THEGREATJ"
+
     # Calling functions based on operation needed from the algo
     if(operation is "newdecision"):
-        scrip_info['decision'], scrip_info['sorter'] = getNewTradeDecision(historical)
+        scrip_info['decision'], scrip_info['sortvalue'] = getNewTradeDecision(historical)
     elif (operation is "trackreversal"):
         scrip_info['decision'] = getTradeTrackingDecision(historical)
-        scrip_info['sorter'] = 0
+        scrip_info['sortvalue'] = 0
 
     # Returning required information
     return scrip_info

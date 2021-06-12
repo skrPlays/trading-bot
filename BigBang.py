@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 # kite, access_token = v3_Authentication.authenticate()
 
 # Scanner thread activation
-scanner_interval = 60*(1/12)
+scanner_interval = 60*(1/3)
 kite=""
 position_tracker_thread = threading.Timer(scanner_interval, v3_Scanner.scan,[kite, scanner_interval])
 position_tracker_thread.start()

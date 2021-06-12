@@ -29,7 +29,7 @@ def sort(algo_response):
     return sorted_algo_response
 
 
-sort(algo_response)
+# sort(algo_response)
 
 #################################################################################################################
 
@@ -61,8 +61,8 @@ def multisort(list_to_sort, criteria):
         print(list_to_sort)
     return list_to_sort
 
-sorting_criteria = (('sort_value_1', False), ('sort_value_2', True))
-multisort(algo_response2, sorting_criteria)
+# sorting_criteria = (('sort_value_1', False), ('sort_value_2', True))
+# multisort(algo_response2, sorting_criteria)
 
 ################  Obsolete methods. Delete this section in the final version   #############################
 

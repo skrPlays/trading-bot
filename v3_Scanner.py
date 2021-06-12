@@ -3,6 +3,7 @@ import v3_TradeAlgorithmModule
 import v3_ConstantLib
 import logging
 import threading
+import Sort
 
 logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format='%(asctime)s - %(message)s')
 
@@ -26,6 +27,7 @@ def scan(kite, interval):
             actionable_queue.append(algo_output)
 
     print(actionable_queue)
+    print("Sort Function:", Sort.sort(actionable_queue))
     # TODO: Call sorting function with actionable queue
 
     # Re-calling scanner after interval
