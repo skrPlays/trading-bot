@@ -11,17 +11,17 @@
 import v3_ConstantLib
 import logging
 
+logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format='%(asctime)s - %(message)s')
 
 def getNewTradeDecision(historical):
-    tradeDecision = "buy"
-    sortingValue, sortingType = getSortingValueType(historical)
-    return tradeDecision, sortingValue, sortingType
+    decision = "buy"
+    sorter = getSortingValueType(historical)
+    return decision, sorter
 
 
 def getSortingValueType(historical):
     sortingValue = 0
-    sortingType = "asc"
-    return sortingValue, sortingType
+    return sortingValue
 
 
 def getTradeTrackingDecision(historical):
@@ -30,14 +30,16 @@ def getTradeTrackingDecision(historical):
 
 def tradeAlgorithm(historical, operation):
     logging.info('Trade Algorithm Module called with operation - '+operation)
+    scrip_info = {}
+
+    # Calling functions based on operation needed from the algo
     if(operation is "newdecision"):
-        return getNewTradeDecision(historical)
+        scrip_info['decision'], scrip_info['sorter'] = getNewTradeDecision(historical)
     elif (operation is "trackreversal"):
-        return getTradeTrackingDecision(historical)
+        scrip_info['decision'] = getTradeTrackingDecision(historical)
+        scrip_info['sorter'] = 0
+
+    # Returning required information
+    return scrip_info
 
 
-# Development Section
-logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format='%(asctime)s - %(message)s')
-samplehistorical = open(v3_ConstantLib.SAMPLE_HISTORICAL,'r').read()
-print(tradeAlgorithm(samplehistorical,"newdecision"))
-print(samplehistorical)
