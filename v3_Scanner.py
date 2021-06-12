@@ -2,10 +2,11 @@ import pandas
 import v3_TradeAlgorithmModule
 import v3_ConstantLib
 import logging
+import threading
 
 logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format='%(asctime)s - %(message)s')
 
-def scan(kite):
+def scan(kite, interval):
     # Reading list of stocks from NSE India
     nse_list = pandas.read_csv("https://www1.nseindia.com/content/indices/ind_nifty500list.csv")
     print(nse_list)
@@ -27,6 +28,7 @@ def scan(kite):
     print(actionable_queue)
     # TODO: Call sorting function with actionable queue
 
-
-# Development Section
-scan("")
+    # Re-calling scanner after interval
+    position_tracker_thread = threading.Timer(interval, scan,[kite, interval])
+    position_tracker_thread.start()
+    return 0
