@@ -1,0 +1,5 @@
+#.gitignore ignores untracked files. Files already tracked by Git are not affected.
+# To stop tracking a file that is currently tracked, use
+#-f is for forced removal
+
+>>> git rm --cached -f DIRECTORY_PATH
