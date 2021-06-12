@@ -1,5 +1,8 @@
+import os
 
-HOME = "C:\\Users\\jai saxena\\PycharmProjects\\TradingBot\\"
-LOGFILE = "C:\\Users\\jai saxena\\PycharmProjects\\TradingBot\\logfile.log"
+current_directory = os.getcwd()
 
-SAMPLE_HISTORICAL = "C:\\Users\\jai saxena\\PycharmProjects\\TradingBot\\SampleData\\historicaldata.txt"
+HOME = current_directory
+LOGFILE = current_directory + "\\logfile.log"
+
+SAMPLE_HISTORICAL = current_directory + "\\SampleData\\historicaldata.txt"
