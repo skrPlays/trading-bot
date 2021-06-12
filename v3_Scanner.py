@@ -1,9 +1,11 @@
 import pandas
+
+import v3_Entry
 import v3_TradeAlgorithmModule
 import v3_ConstantLib
 import logging
 import threading
-import Sort
+import v3_Sort
 
 logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format='%(asctime)s - %(message)s')
 
@@ -27,8 +29,13 @@ def scan(kite, interval):
             actionable_queue.append(algo_output)
 
     print(actionable_queue)
-    print("Sort Function:", Sort.sort(actionable_queue))
-    # TODO: Call sorting function with actionable queue
+    print("Sort Function:", v3_Sort.sort(actionable_queue))
+
+    # Call sorting function with actionable queue
+    sorted_algo_output = v3_Sort.sort(actionable_queue)
+
+    # Invoking Entry module
+    v3_Entry.take_entry(sorted_algo_output, samplehistorical)
 
     # Re-calling scanner after interval
     position_tracker_thread = threading.Timer(interval, scan,[kite, interval])
