@@ -46,3 +46,8 @@ def tradeAlgorithm(historical, operation):
     return scrip_info
 
 
+def is_entry_valid(scrip, hist_data):
+
+    tradeAlgorithm()
+
+    return None

@@ -4,6 +4,9 @@ import threading
 import v3_Scanner
 
 import warnings
+
+import v3_Tracker
+
 warnings.filterwarnings("ignore")
 
 # Authenticate
@@ -17,3 +20,7 @@ position_tracker_thread.start()
 
 # Tracking thread activation
 tracking_interval = 60*(1/4)
+v3_Tracker.track_active_trades(active_trade_list)
+
+# Exit at 00:3:19
+# Invoke Timer module to check time and exit all positions at market price
