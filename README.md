@@ -16,17 +16,20 @@
 
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
 
-##Naming Convention used
+## Naming Convention used
+
 module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name.
 For details, refer https://www.python.org/dev/peps/pep-0008/#package-and-module-names
 
-##Zerodha API Links
+## Zerodha API Links
+
 - [Usage and Configuration](https://black.readthedocs.io/en/stable/usage_and_configuration/index.html)
+
 KiteConnect API Doc - https://kite.trade/docs/connect/v3/
 KiteConnect Python Doc - https://kite.trade/docs/pykiteconnect/v3/
 KiteConnect github page - https://github.com/zerodhatech/pykiteconnect
 KiteConnect developer login - https://developers.kite.trade/login
 KiteConnect developer forum - https://kite.trade/forum/
 
-##Workflow Status
+## Workflow Status
 https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE>/badge.svg
