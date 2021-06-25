@@ -1,13 +1,10 @@
+import datetime
 import json
 import time
-import HistoricalDataParser
-import io
+
 import pandas
-import requests
-import Scanner
-import NewPositionQueue
-import DecisionFunctions
-import datetime
+
+from trading_freedom_delete import Scanner
 
 
 def bt_scan(kite, from_date, to_date):
@@ -16,11 +13,15 @@ def bt_scan(kite, from_date, to_date):
         nifty_list = json.load(read_file)
 
         for scrip in nifty_list:
-            token = scrip['instrument_token']
-            time.sleep(1/3) # Rate limit of 3 requests per second
+            token = scrip["instrument_token"]
+            time.sleep(1 / 3)  # Rate limit of 3 requests per second
 
-            records = kite.historical_data(instrument_token=token,from_date=from_date,to_date=to_date,interval="15minute")
-            with open("C:\wamp\www\TradeFreedom\BackTesting\HistoricalData\\"+scrip["tradingsymbol"]+".txt", "w") as write_file:
+            records = kite.historical_data(
+                instrument_token=token, from_date=from_date, to_date=to_date, interval="15minute"
+            )
+            with open(
+                "C:\wamp\www\TradeFreedom\BackTesting\HistoricalData\\" + scrip["tradingsymbol"] + ".txt", "w"
+            ) as write_file:
                 write_file.write(str(records))
 
             print(records)
@@ -28,14 +29,15 @@ def bt_scan(kite, from_date, to_date):
             # Plotting CandleStick chart
             df = pandas.DataFrame(data=records)
             df.index = df["date"]
-            df.index.name = 'timestamp'
+            df.index.name = "timestamp"
 
             scrip = Scanner.scanning_str1(scrip, df, 0)
 
-    json.dump(nifty_list,scanresults_file)
+    json.dump(nifty_list, scanresults_file)
     scanresults_file.close()
 
     return 0
+
 
 def bt_newposition():
     scannerlist = json.load(open("C:\wamp\www\TradeFreedom\scanresults.json", "r"))
@@ -44,13 +46,10 @@ def bt_newposition():
         if not scrip["action"] == "NONE":
             position_ready.append(scrip)
 
-    position_ready = sorted(
-        position_ready,
-        key = lambda x: x['sort'],
-        reverse=True
-    )
+    position_ready = sorted(position_ready, key=lambda x: x["sort"], reverse=True)
 
     return position_ready
+
 
 def backtest_coordinator(kite):
 
@@ -65,13 +64,11 @@ def backtest_coordinator(kite):
     backtestfile.write("\n")
     # backtestfile.truncate(0)
 
-
-    while (test_to < datetime.datetime(2020, 11, 23, 10, 30)):
+    while test_to < datetime.datetime(2020, 11, 23, 10, 30):
         bt_scan(kite, from_date, test_to)
         sorted_scrips = bt_newposition()
         print(sorted_scrips[0])
         test_to = test_to + datetime.timedelta(minutes=15)
-
 
     # TODO: STEP 2
     # position_ready = bt_newposition()

@@ -1,8 +1,8 @@
 #!python
-import DecisionFunctions
 import json
-from kiteconnect import KiteTicker
-from kiteconnect import KiteConnect
+
+from kiteconnect import KiteConnect, KiteTicker
+
 # import pyttsx3
 
 
@@ -10,7 +10,6 @@ def startticker(api_key, access_token):
     # Declare
     instrument_token = []
     ltp_json = {}
-
 
     # Initialise
     kws = KiteTicker(api_key, access_token)
@@ -27,7 +26,7 @@ def startticker(api_key, access_token):
         # Making sure that all current positions are subscribed
         for net in kite.positions()["net"]:
             if not (net["instrument_token"] in ltp_json):
-                print("New Subscription:",net["instrument_token"])
+                print("New Subscription:", net["instrument_token"])
                 ws.subscribe([net["instrument_token"]])
 
         with open("C:\wamp\www\TradeFreedom\ltptracker.json", "w") as write_file:

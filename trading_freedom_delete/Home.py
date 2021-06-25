@@ -1,20 +1,13 @@
-from kiteconnect import KiteConnect
-import pandas
-import json
-import threading
-import time
-import requests
-import Ticker
-import PositionTracker
 import datetime
-import HistoricalDataParser
-import Scanner
-import NewPositionQueue
-import Backtester
-import Backtester_v2
-import NewPositionTracker
-
+import json
 import warnings
+
+import pandas
+import requests
+from kiteconnect import KiteConnect
+
+from trading_freedom_delete import Backtester_v2
+
 warnings.filterwarnings("ignore")
 
 # Variable Declarations/Initializations
