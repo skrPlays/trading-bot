@@ -10,9 +10,9 @@
 
 import logging
 
-import v3_ConstantLib
+import constants
 
-logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format="%(asctime)s - %(message)s")
+logging.basicConfig(filename=constants.LOGFILE, level=logging.INFO, format="%(asctime)s - %(message)s")
 
 
 def getNewTradeDecision(historical):

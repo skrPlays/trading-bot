@@ -1,8 +1,8 @@
 """
 @author: some_cool_dude
 """
-import v3_Tracker
-import v3_TradeAlgorithmModule
+import tracker
+import trade_algorithm
 
 
 def get_stop_loss(
@@ -63,7 +63,7 @@ def verify_entry_decision(scrip, hist_data):
     :param hist_data:
     :return:
     """
-    is_entry_valid = v3_TradeAlgorithmModule.is_entry_valid(scrip, hist_data)
+    is_entry_valid = trade_algorithm.is_entry_valid(scrip, hist_data)
     # Any other checks that are out-of-scope for the Algo module
     return is_entry_valid
 

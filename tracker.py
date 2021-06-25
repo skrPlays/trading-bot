@@ -2,8 +2,8 @@
 @author: some_cool_dude
 """
 
-import v3_Exit
-import v3_TradeAlgorithmModule
+import exit
+import trade_algorithm
 
 
 def init_ticker(active_trade_list):
@@ -28,7 +28,7 @@ def is_indicator_exit(scrip):
     is_exit = False
 
     # Invoke Algo module probably
-    is_exit = v3_TradeAlgorithmModule.get_indicator_decision(scrip)
+    is_exit = trade_algorithm.get_indicator_decision(scrip)
 
     return is_exit
 
@@ -40,13 +40,13 @@ def track_active_trades(active_trade_list):
     for scrip in active_trade_list:
         # Step 1: Exit if SL hit
         if """Check if current PA is equal or less than the defined SL""":
-            v3_Exit.exit_trade(scrip)  # Do we really need to use this ??
+            exit.exit_trade(scrip)  # Do we really need to use this ??
         # Step 2: Exit when target is hit
         elif """#Check if current PA is equal or greater than the defined target""":
-            v3_Exit.exit_trade(scrip)  # Can we instead use CO in zerodha ??
+            exit.exit_trade(scrip)  # Can we instead use CO in zerodha ??
         # Step 3: Check if PA is favourable to our trade, define trailing SL
         elif """Check if current PA is equal or greater than our entry price""":
             x = 0  # Invoke the Kite function to modify SL price
         # Step 4: Indicator-based exit
         elif is_indicator_exit(scrip):
-            v3_Exit.exit_trade(scrip)
+            exit.exit_trade(scrip)

@@ -1,4 +1,4 @@
 .idea/*
 tutorial/*
-/Hello world.py
 __pycache__/*
+.mypy_cache/*

@@ -3,12 +3,12 @@ import threading
 
 import pandas
 
-import v3_ConstantLib
-import v3_Entry
-import v3_Sort
-import v3_TradeAlgorithmModule
+import constants
+import entry
+import sort
+import trade_algorithm
 
-logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format="%(asctime)s - %(message)s")
+logging.basicConfig(filename=constants.LOGFILE, level=logging.INFO, format="%(asctime)s - %(message)s")
 
 
 def scan(kite, interval):
@@ -25,19 +25,19 @@ def scan(kite, interval):
 
     # Reading through the list and sending to algo for initial testing
     for scrip in nse_list:  # TODO: Change to nifty list later
-        samplehistorical = open(v3_ConstantLib.SAMPLE_HISTORICAL, "r").read()
-        algo_output = v3_TradeAlgorithmModule.tradeAlgorithm(samplehistorical, "newdecision")
+        samplehistorical = open(constants.SAMPLE_HISTORICAL, "r").read()
+        algo_output = trade_algorithm.tradeAlgorithm(samplehistorical, "newdecision")
         if algo_output["decision"] is "buy" or algo_output["decision"] is "sell":
             actionable_queue.append(algo_output)
 
     print(actionable_queue)
-    print("Sort Function:", v3_Sort.sort(actionable_queue))
+    print("Sort Function:", sort.sort(actionable_queue))
 
     # Call sorting function with actionable queue
-    sorted_algo_output = v3_Sort.sort(actionable_queue)
+    sorted_algo_output = sort.sort(actionable_queue)
 
     # Invoking Entry module
-    v3_Entry.take_entry(sorted_algo_output, samplehistorical)
+    entry.take_entry(sorted_algo_output, samplehistorical)
 
     # Re-calling scanner after interval
     position_tracker_thread = threading.Timer(interval, scan, [kite, interval])
