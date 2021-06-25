@@ -3,22 +3,22 @@ import os
 
 import pandas as pandas
 
-#TODO: Add methods to read/write .csv files and DataFrames, if required
+# TODO: Add methods to read/write .csv files and DataFrames, if required
 
-'''
+"""
 All the re-usable functions to be defined in this module.
 This will limit code redundancy and improve readability.
 
 References for OS package: https://automatetheboringstuff.com/chapter8/
-'''
+"""
 
 
 def read_file(file_name):
-    '''
+    """
     File to-be-read is kept in a hard-coded '.../temp' directory
     :param file_name: to be provided by the module that invokes this funciton
     :return: data that might be either of the list or dictionary collection types
-    '''
+    """
     directory = get_directory()
     file_path = os.path.join(directory, file_name + ".txt")
     with open(file_path, "r") as file:
@@ -27,13 +27,13 @@ def read_file(file_name):
 
 
 def write_file(data, file_name, append):
-    '''
+    """
     :param data: might be either of the list or dictionary collection types
     :param file_name: to be provided explicitly for each module where this function is invoked. Ex: stocklist.txt, historicalData.txt
     :param append: boolean 'True' if new data is to be appended to the existing data, else boolean 'False'
     :return: nothing but creates the directory '.../temp' (not to be committed) where the file_name is then created.
              Stores the argument 'data' in the created file_name for the current session.
-    '''
+    """
     directory = get_directory()
     file_path = os.path.join(directory, file_name + ".txt")
     print(file_path)
@@ -52,13 +52,13 @@ def write_file(data, file_name, append):
             json.dump(data, file)
 
 
-def get_directory():
+def get_directory(name="temp"):
     # abs_directory = "C:\Users\Suyash Kumar Rai\Documents"+"\\"+filename+".txt" # To set an absolute pre-defined path
     # directory = os.path.expanduser('~') # Finds relative path of the user's home directory
     current_directory = os.getcwd()  # Gets the current directory's path where the TradingBot project is located
-    directory_path = os.path.join(current_directory, 'temp')
-    if (os.path.isdir(directory_path)):
-        exit
+    directory_path = os.path.join(current_directory, name)
+    if os.path.isdir(directory_path):
+        exit()
     else:
         os.makedirs(directory_path)
 
@@ -72,7 +72,7 @@ data_list = [
     {"instrument_token": 1147137, "tradingsymbol": "AARTIDRUGS", "sortvalue": 2000},
     {"instrument_token": 1793, "tradingsymbol": "AARTIIND", "sortvalue": 3000},
     {"instrument_token": 1378561, "tradingsymbol": "AAVAS", "sortvalue": -3000},
-    {"instrument_token": 3329, "tradingsymbol": "ABB", "sortvalue": -5000}
+    {"instrument_token": 3329, "tradingsymbol": "ABB", "sortvalue": -5000},
 ]
 data_dict = {
     "status4": "success",
@@ -83,9 +83,9 @@ data_dict = {
             ["2015-12-28T09:17:00+0530", 1385.5, 1387, 1385.5, 1385.7, 212],
             ["2015-12-28T09:18:00+0530", 1387, 1387.95, 1385.3, 1387.95, 1208],
             ["2015-12-28T09:19:00+0530", 1387, 1387.55, 1385.6, 1386.25, 716],
-            ["2015-12-28T09:20:00+0530", 1386.95, 1389.95, 1386.95, 1389, 727]
+            ["2015-12-28T09:20:00+0530", 1386.95, 1389.95, 1386.95, 1389, 727],
         ]
-    }
+    },
 }
 write_file(data_list, "test_list", True)
 read_file("test_list")
@@ -95,8 +95,8 @@ read_file("test_dict")
 nifty500 = pandas.read_csv("https://www1.nseindia.com/content/indices/ind_nifty500list.csv")
 nifty_list = []
 i = 0
-while i < nifty500['Symbol'].size:
-    nifty_list.append({"instrument_token": nifty500['ISIN Code'].get(i), "tradingsymbol": nifty500['Symbol'].get(i)})
+while i < nifty500["Symbol"].size:
+    nifty_list.append({"instrument_token": nifty500["ISIN Code"].get(i), "tradingsymbol": nifty500["Symbol"].get(i)})
     i += 1
 write_file(nifty_list, "scrip_list", False)
 read_file("scrip_list")

@@ -1,13 +1,15 @@
-import pandas
-
-import v3_Entry
-import v3_TradeAlgorithmModule
-import v3_ConstantLib
 import logging
 import threading
-import v3_Sort
 
-logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format='%(asctime)s - %(message)s')
+import pandas
+
+import v3_ConstantLib
+import v3_Entry
+import v3_Sort
+import v3_TradeAlgorithmModule
+
+logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format="%(asctime)s - %(message)s")
+
 
 def scan(kite, interval):
     # Reading list of stocks from NSE India
@@ -22,10 +24,10 @@ def scan(kite, interval):
     #         nifty_list.append({"instrument_token":scrip['instrument_token'],"tradingsymbol":scrip['tradingsymbol']})
 
     # Reading through the list and sending to algo for initial testing
-    for scrip in nse_list: # TODO: Change to nifty list later
-        samplehistorical = open(v3_ConstantLib.SAMPLE_HISTORICAL,'r').read()
-        algo_output = v3_TradeAlgorithmModule.tradeAlgorithm(samplehistorical,"newdecision")
-        if algo_output['decision'] is 'buy' or algo_output['decision'] is 'sell':
+    for scrip in nse_list:  # TODO: Change to nifty list later
+        samplehistorical = open(v3_ConstantLib.SAMPLE_HISTORICAL, "r").read()
+        algo_output = v3_TradeAlgorithmModule.tradeAlgorithm(samplehistorical, "newdecision")
+        if algo_output["decision"] is "buy" or algo_output["decision"] is "sell":
             actionable_queue.append(algo_output)
 
     print(actionable_queue)
@@ -38,6 +40,6 @@ def scan(kite, interval):
     v3_Entry.take_entry(sorted_algo_output, samplehistorical)
 
     # Re-calling scanner after interval
-    position_tracker_thread = threading.Timer(interval, scan,[kite, interval])
+    position_tracker_thread = threading.Timer(interval, scan, [kite, interval])
     position_tracker_thread.start()
     return 0

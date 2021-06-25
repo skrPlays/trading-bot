@@ -8,10 +8,12 @@
 # Sorting Value (sortingValue) - Double
 # Sorting Type (sortingType) - String {"asc","desc"}
 
-import v3_ConstantLib
 import logging
 
-logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format='%(asctime)s - %(message)s')
+import v3_ConstantLib
+
+logging.basicConfig(filename=v3_ConstantLib.LOGFILE, level=logging.INFO, format="%(asctime)s - %(message)s")
+
 
 def getNewTradeDecision(historical):
     decision = "buy"
@@ -29,18 +31,18 @@ def getTradeTrackingDecision(historical):
 
 
 def tradeAlgorithm(historical, operation):
-    logging.info('Trade Algorithm Module called with operation - '+operation)
+    logging.info("Trade Algorithm Module called with operation - " + operation)
     scrip_info = {}
 
-    scrip_info['instrument_token'] = 1011007
-    scrip_info['tradingsymbol'] = "THEGREATJ"
+    scrip_info["instrument_token"] = 1011007
+    scrip_info["tradingsymbol"] = "THEGREATJ"
 
     # Calling functions based on operation needed from the algo
-    if(operation is "newdecision"):
-        scrip_info['decision'], scrip_info['sortvalue'] = getNewTradeDecision(historical)
-    elif (operation is "trackreversal"):
-        scrip_info['decision'] = getTradeTrackingDecision(historical)
-        scrip_info['sortvalue'] = 0
+    if operation is "newdecision":
+        scrip_info["decision"], scrip_info["sortvalue"] = getNewTradeDecision(historical)
+    elif operation is "trackreversal":
+        scrip_info["decision"] = getTradeTrackingDecision(historical)
+        scrip_info["sortvalue"] = 0
 
     # Returning required information
     return scrip_info
