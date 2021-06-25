@@ -37,20 +37,20 @@ jobs:
  #      flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Fix code quality and commit
       uses: ricardochaves/python-lint@v1.4.0
-        with:
-          python-root-list: "python_alelo tests"
-          use-pylint: false
-          use-pycodestyle: false
-          use-flake8: false
-          use-black: false
-          use-mypy: false
-          use-isort: false
-          extra-pylint-options: ""
-          extra-pycodestyle-options: ""
-          extra-flake8-options: ""
-          extra-black-options: ""
-          extra-mypy-options: ""
-          extra-isort-options: ""
+      with:
+        python-root-list: "python_alelo tests"
+        use-pylint: false
+        use-pycodestyle: false
+        use-flake8: false
+        use-black: false
+        use-mypy: false
+        use-isort: false
+        extra-pylint-options: ""
+        extra-pycodestyle-options: ""
+        extra-flake8-options: ""
+        extra-black-options: ""
+        extra-mypy-options: ""
+        extra-isort-options: ""
     - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Applying code formatter changes by black
