@@ -1,6 +1,6 @@
 # TradingBot
 
-<h2 align="center">The Path to Financial Freedom</h2>
+<h2 align="center">Predicitve Data Analysis of Market</h2>
 
 <p align="center">
 <a href="https://github.com/psf/black/actions"><img alt="Actions Status" src="https://github.com/psf/black/workflows/Test/badge.svg"></a>
